@@ -1,0 +1,8 @@
+# Start fresh
+rm -rf app
+npx create-next-app@latest . --typescript --tailwind --app --use-npm
+cd ai-payment-agent 
+npm install 
+npm install ai @ai-sdk/openai payman-ai-toolkit 
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p 
