@@ -1,6 +1,6 @@
 # Payman + AI SDK Quickstart
 
-This is a starter template showing how to use the Payman Toolkit with the Vercel AI SDK to create an AI that can send and receive payments.
+This is a starter template showing how to use the Payman Paykit with the Vercel AI SDK to create an AI that can send and receive payments.
 
 ## Getting Started
 
@@ -27,12 +27,12 @@ This is a starter template showing how to use the Payman Toolkit with the Vercel
 
 - [Next.js](https://nextjs.org/) - React framework
 - [Vercel AI SDK](https://sdk.vercel.ai/docs) - AI streaming and function calling
-- [Payman API](https://docs.paymanai.com) - Payment processing
+- [Payman Paykit](https://docs.paymanai.com) - Payment processing tools
 - [Tailwind CSS](https://tailwindcss.com) - Styling
 
 ## How It Works
 
-The app uses the Vercel AI SDK to create a streaming chat interface that can process payment instructions. When a user sends a message, the AI analyzes it and can call Payman API functions to:
+The app uses the Vercel AI SDK to create a streaming chat interface that can process payment instructions. When a user sends a message, the AI analyzes it and can call Payman Paykit functions to:
 
 - Send payments
 - Search payment destinations

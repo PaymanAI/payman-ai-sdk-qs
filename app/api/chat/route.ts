@@ -1,11 +1,11 @@
 import { openai } from '@ai-sdk/openai';
 import { streamText } from 'ai';
-import { paymanToolkit } from 'payman-ai-toolkit';
+import { paykit } from 'payman-paykit';
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
 
-const tools = paymanToolkit({
+const tools = paykit({
   apiSecret: process.env.PAYMAN_API_SECRET!,
   environment: process.env.PAYMAN_ENVIRONMENT as 'sandbox' | 'production'
 });
@@ -35,21 +35,11 @@ export async function POST(req: Request) {
       console.log('Response created');
       return response;
     } catch (streamError) {
-      console.error('Stream Error:', {
-        name: streamError.name,
-        message: streamError.message,
-        stack: streamError.stack,
-        cause: streamError.cause
-      });
+      console.error('Stream Error:', streamError);
       throw new Error(`Stream error: ${streamError.message}`);
     }
   } catch (error) {
-    console.error('API Error:', {
-      name: error.name,
-      message: error.message,
-      stack: error.stack,
-      cause: error.cause
-    });
+    console.error('API Error:', error);
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
