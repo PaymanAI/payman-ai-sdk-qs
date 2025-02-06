@@ -12,7 +12,7 @@
     "@ai-sdk/openai": "^1.1.9",
     "ai": "^4.1.18",
     "next": "14.1.0",
-    "payman-paykit": "^1.0.2",
+    "payman-paykit": "^1.0.3",
     "react": "^18",
     "react-dom": "^18"
   },
